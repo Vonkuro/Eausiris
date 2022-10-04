@@ -8,9 +8,21 @@ Create Table Client(
 
 Create Table Capteurs( 
        id_capteur                    VARCHAR(20)   Primary Key,
-       id_bassin                     VARCHAR(20),
+       id_bassinEau                  VARCHAR(20),
+       id_bassinPluie		     VARCHAR(20),
        adresse_ip                    VARCHAR(50),   
        type_cp        		     VARCHAR(100));
+
+Create Table DHT(
+	id_DHT			     VARCHAR(20)   Primary Key,
+	id_capteur	             VARCHAR(20),
+	Temperature		     Float(20),
+	Humidite		     Float(20));
+
+Create Table WaterSensor(
+	id_WaterSensor		     VARCHAR(20)   Primary Key,
+	id_capteur                   VARCHAR(20),
+	HauteurEau		     Float(20));		   		
 
 Create TABLE Bassin_eau( 
        id_bassin                     VARCHAR(20)   Primary Key,
