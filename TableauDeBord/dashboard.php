@@ -30,7 +30,7 @@
                         <a class="nav-link disabled" href="#">Récolte</a>
                     </li>
                 </ul>
-            </div>
+            </gitdiv>
 
             <div class="col">
                 <p>
