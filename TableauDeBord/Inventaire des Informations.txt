@@ -1,0 +1,7 @@
+-Prix de l'eau au litre
+-Volume d'eau dans le basin
+-Etat des valves
+-Dépense réelle en eau ce mois ci
+-Graph dépense réelle en eau par mois
+-Dépense téhorique en cas uniquement achat d'eau
+-Economie en eau le mois précedent
