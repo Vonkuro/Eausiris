@@ -1,0 +1,7 @@
+.rectangle 
+{
+    border: black;
+    border: solid;
+    border-width: 2.5px;
+    margin: 1px;
+}
