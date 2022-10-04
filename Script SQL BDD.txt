@@ -1,0 +1,34 @@
+Create DATABASE Eausiris;
+USE Eausiris;
+Create Table Client( 
+
+       id_client                     VARCHAR(20)   Primary Key,
+       identifiant                   VARCHAR(20),   
+       code_licence		     VARCHAR(100));
+
+Create Table Capteurs( 
+       id_capteur                    VARCHAR(20)   Primary Key,
+       id_bassin                     VARCHAR(20),
+       adresse_ip                    VARCHAR(50),   
+       type_cp        		     VARCHAR(100));
+
+Create TABLE Bassin_eau( 
+       id_bassin                     VARCHAR(20)   Primary Key,
+       id_client		     VARCHAR(20),
+       type                          VARCHAR(50),   
+       adresse        		     VARCHAR(100),  
+       code_postale                  VARCHAR(30),
+       rue	           	     VARCHAR(30),
+       ville	                     VARCHAR(20),
+       volume_max	             VARCHAR(20),
+       volume_actuelle	 	     VARCHAR(20));
+
+Create TABLE Valves( 
+       id_valve                      VARCHAR(20)   Primary Key, 
+       nom  			     VARCHAR(20),
+       id_bassin		     VARCHAR(20));
+
+Create TABLE Entite_mois(
+        prix_litre		     Float(20),
+	Consomation		     Float(20),
+	Economisation		     Float(20));
