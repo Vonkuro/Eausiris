@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         
-    <img src="../logo.jpg" alt="Eausiris">
+    <img src="../logo.png" alt="Eausiris">
         <div class="row align-items-start">
             <div class="col">
                 

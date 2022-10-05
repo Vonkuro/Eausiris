@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <img src="../logo.jpg" alt="Eausiris">
+                <img src="../logo.png" alt="Eausiris">
             </div>
             <div class="col">
             </div>
