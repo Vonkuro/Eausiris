@@ -13,7 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col">
                 <a href="http://localhost/Eausiris/Login/login.html">
@@ -29,39 +29,40 @@
         <div class="row"><div class="col"><br></div></div>
         <div class="row"><div class="col"><br></div></div>
         <div class="row "> <!-- align-items-start -->
+            <div class="col"></div>
             <div class="col">
                 
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../GestionEau/gestionDesEaux.php">Irrigation</a>
+                        <a class="nav-link active" aria-current="page" href="../GestionEau/gestionDesEaux.php"><h2>Irrigation</h2></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Méthanisation</a>
+                        <a class="nav-link disabled" href="#"><h2>Méthanisation</h2></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Récolte</a>
+                        <a class="nav-link disabled" href="#"><h2>Récolte</h2></a>
                     </li>
                 </ul>
             </div>
 
-            <div class="col">
+            <div class="col-3">
                 <p>
-                    Prix de l'eau <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span>
+                    <h4>Prix de l'eau <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
                 </p>
                 <p>
-                    Volume d'eau utilisée <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span>
+                    <h4>Volume d'eau utilisée <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
                 </p>
                 <p>
-                    Facture d'eau effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span>
+                    <h4>Facture d'eau effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
                 </p>
                 <p>
-                    Econome effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span>
+                    <h4>Econome effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
                 </p>
                 <p>
-                    Facture d'eau effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span>
+                    <h4>Facture d'eau effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
                 </p>
                 <p>
-                    Econome effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span>
+                    <h4>Econome effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
                 </p>
             </div>
 
@@ -71,6 +72,7 @@
                     $pc->draw();
                 ?>
             </div>
+            <div class="col"></div>
         </div>
     </div>
 </body>

@@ -9,18 +9,13 @@
     <script src ="./gestionDesEaux.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row align-items-center">
             <div class="col">
                 <a href="http://localhost/Eausiris/TableauDeBord/dashboard.php">
                     <img src="../logo.png" alt="Eausiris">
                 </a>
             </div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-        </div>
-        <div class="row">
             <div class="col"></div>
             <div class="col">
                 <h1>Irrigation</h1>
