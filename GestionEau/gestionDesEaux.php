@@ -19,15 +19,20 @@
 </html>
 
 <?php
-// nom est un string
+// Bassin est un array
+//     -nom
+//     -volume actuel
+//     -volume maximum
 // valves est un array
-function afficherBassin ($nomBassin,$valves)
+//     -les noms en string des valves
+function afficherBassin ($Bassin,$valves)
 {
-    echo "<h3>Bassin " . $nomBassin . "</h3>";
+    echo "<h3>Bassin " . $Bassin[0] . "</h3>";
     foreach ($valves as $valve) 
     {
         afficherValve($valve);
     }
+    echo "<h4>Volume de " . $Bassin[1] . " Litres d'eau pour une contenance de " . $Bassin[2] . " Litres</h4>";
 }
 
 function afficherValve($nomValve)
@@ -38,16 +43,16 @@ function afficherValve($nomValve)
 // minimal pour présenter l'affichages des bassins
 function afficherLesBassins()
 {
-    $bassin = "Saint Amand couvert";
+    $bassin = ["Saint Amand couvert", 10,20];
     $valves = ["Valve d'entrée", "Valve de sortie"];
     afficherBassin($bassin, $valves);
 
-    $bassin = "recuperateur de pluie";
+    $bassin = ["recuperateur de pluie",5,6];
     $valves = ["Valve de sortie"];
     afficherBassin($bassin, $valves);
 
-    $bassin = "Saint Amand externe";
-    $valves = ["Valve d'entrée","Valve du blé", "Valve du maïs"];
+    $bassin = ["Saint Amand externe",522, 800];
+    $valves = ["Valve d'entrée","Valve de sortie blé", "Valve de sortie maïs"];
     afficherBassin($bassin, $valves);
 
 }
