@@ -33,7 +33,7 @@
                 
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Irrigation</a>
+                        <a class="nav-link active" aria-current="page" href="../GestionEau/gestionDesEaux.php">Irrigation</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Méthanisation</a>
