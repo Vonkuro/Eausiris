@@ -9,8 +9,25 @@
 </head>
 <body>
     <div class="container">
-        <img src="../logo.jpg" alt="Eausiris"> 
-        <h1>Irrigation</h1>
+        <div class="row">
+            <div class="col">
+                <img src="../logo.jpg" alt="Eausiris">
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <h1>Irrigation</h1>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row"><div class="col"><br></div></div>
+        <div class="row"><div class="col"><br></div></div>
+        <div class="row"><div class="col"><br></div></div>
+        
         <?php afficherLesBassins() ?>
     </div>
 
@@ -27,12 +44,33 @@
 //     -les noms en string des valves
 function afficherBassin ($Bassin,$valves)
 {
-    echo "<h3>Bassin " . $Bassin[0] . "</h3>";
+    echo 
+    '
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-md-4">
+            <h3>Bassin ' . $Bassin[0] . '</h3>
+        </div>
+        <div class="col-md-4">
+    ';
     foreach ($valves as $valve) 
     {
         afficherValve($valve);
     }
-    echo "<h4>Volume de " . $Bassin[1] . " Litres d'eau pour une contenance de " . $Bassin[2] . " Litres</h4>";
+    echo 
+    '
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-md-auto">
+            <h4>Volume de ' . $Bassin[1] . " Litres d'eau pour une contenance de " . $Bassin[2] . ' Litres</h4>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1"></div>
+    </div>
+    ';
 }
 
 function afficherValve($nomValve)
