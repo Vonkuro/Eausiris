@@ -3,7 +3,8 @@ USE Eausiris;
 Create Table Client( 
 
        id_client                     VARCHAR(20)   Primary Key,
-       identifiant                   VARCHAR(20),   
+       identifiant                   VARCHAR(20),
+       password                      VARCHAR(25),  
        code_licence		     VARCHAR(100));
 
 Create Table Capteurs( 
