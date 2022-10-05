@@ -11,7 +11,9 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <img src="../logo.png" alt="Eausiris">
+                <a href="http://localhost/Eausiris/TableauDeBord/dashboard.php">
+                    <img src="../logo.png" alt="Eausiris">
+                </a>
             </div>
             <div class="col"></div>
             <div class="col"></div>

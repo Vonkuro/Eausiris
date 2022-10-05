@@ -14,9 +14,21 @@
 </head>
 <body>
     <div class="container">
-        
-    <img src="../logo.png" alt="Eausiris">
-        <div class="row align-items-start">
+        <div class="row align-items-center">
+            <div class="col">
+                <a href="http://localhost/Eausiris/Login/login.html">
+                    <img src="../logo.png" alt="Eausiris">
+                </a>
+            </div>
+            <div class="col">
+                <h1>Tableau de Bord</h1>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row"><div class="col"><br></div></div>
+        <div class="row"><div class="col"><br></div></div>
+        <div class="row"><div class="col"><br></div></div>
+        <div class="row "> <!-- align-items-start -->
             <div class="col">
                 
                 <ul class="nav flex-column">
@@ -30,7 +42,7 @@
                         <a class="nav-link disabled" href="#">Récolte</a>
                     </li>
                 </ul>
-            </gitdiv>
+            </div>
 
             <div class="col">
                 <p>
