@@ -1,70 +1,45 @@
 #include <Arduino.h>
+#include <SPI.h>
+#include <Ethernet.h>
 #include <Wire.h>
 #include <DHT.h>
 #include <Adafruit_Sensor.h>
 #include <stdio.h>
-//include <iostream>
-
-// Only one of the following to be true.
-#define USE_ETHERNET_GENERIC      true
-#define USE_ETHERNET_ESP8266      false
-#define USE_ETHERNET_ENC          false
-#define USE_ETHERNET_LAN8742A     false
-#define USE_ETHERNET_LAN8720      false
-#define USE_CUSTOM_ETHERNET       false
-#define USE_UIP_ETHERNET          false
-//////
-#include <MySQL_Generic.h>
-
-using namespace std;
+#include <Ethernet.h>
+#include <MySQL_Connection.h>
 
 #define DHTPIN 8
 
 #define DHTTYPE DHT11
 
-int main void{
-                  try{
-                         sql::Driver* driver;
-                         sql::Connection* con;
-                         sql::Statement* stmt;
-                         sql::ResultSet* requete;
-                  
-    driver = get_driver_instance();
-    con = driver->connect("tcp://localhost:3306", "root", "");
 
-    con->setSchema("eausiris");
-    stmt = con->createStatement();
-
-    requete = stmt->executeQuery("SELECT Temperature FROM dht");
-
-    while(requete->next()){
-      Serial.print("MySql a repondu");   
-      Serial.println(requete);
-      
-  
-
-    }
-
-    delete requete;
-    delete stmt;
-    delete con;
-
-// }  catch (sql::SQLException &e) {
-//   // Gestion des execeptions pour déboggage
-//   cout << "# ERR: " << e.what();
-//   cout << " (code erreur MySQL: " << e.getErrorCode();
-//   cout << ", EtatSQL: " << e.getSQLState() << " )" << endl;
-// }
-
-// on sort en indiquant que tout c'est bien passé
-return EXIT_SUCCESS;
-}
 
 
 DHT dht(DHTPIN, DHTTYPE); 
 
+byte mac_addr[] = { 0xA1, 0xB7, 0x3B, 0xD8, 0x2C, 0xFD };
+
+IPAddress server_addr(127,0,0,1);  // IP of the MySQL *server* here
+char user[] = "root";              // MySQL user login username
+char password[] = "";        // MySQL user login password
+char default_db = "eausiris";
+
+EthernetClient client;
+MySQL_Connection conn((Client *)&client);
+
+
 void setup(){
-  Serial.begin(9600);
+  Serial.begin(115200);
+  while (!Serial); 
+  Ethernet.begin(mac_addr);
+  Serial.println("Connecting...");
+  if (conn.connect(server_addr, 3306, user, password, default_db)) {
+    delay(1000);
+    Serial.print("Fonctionnelle");
+  }
+  else
+    Serial.println("Echec.");
+  conn.close();
   Serial.println("DHT22 test");
   dht.begin();
 
@@ -72,7 +47,7 @@ void setup(){
 
 
 void loop(){
-  delay(1000);
+  delay(5000);
   float h = dht.readHumidity();
   float t = dht.readTemperature();
 
