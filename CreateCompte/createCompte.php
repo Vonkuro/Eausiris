@@ -1,5 +1,5 @@
 <?php
-    require 'modele.php';
+    require '../Workspace/modele.php';
     $insertionbdd = insertBDD();
 ?>
 <!DOCTYPE html>
