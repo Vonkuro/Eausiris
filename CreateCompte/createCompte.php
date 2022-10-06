@@ -1,3 +1,7 @@
+<?php
+    require 'modele.php';
+    $insertionbdd = insertBDD();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,7 +12,6 @@
     <link href="./createCompte.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-
 <body>
     <div class="container">
         <div class="row">
@@ -34,27 +37,27 @@
             <div class="col">
                 <h1>Création de Compte</h1>
                 <br>
-                <form>
+                <form name="form_inscription" method="post" action="./createCompte.php">
                     <div class="mb-3">
-                        <label for="username" class="form-label">
+                        <label for="identifiant" class="form-label">
                             <h3>Nom d'Utilisateur</h3>
                         </label>
-                        <input type="text" class="form-control" id="username">
+                        <input type="text" class="form-control" name="identifiant">
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">
+                        <label for="motdepasse" class="form-label">
                             <h3>Mot de Passe</h3>
                         </label>
-                        <input type="password" class="form-control" id="password">
+                        <input type="password" class="form-control" name="motdepasse">
                     </div>
                     <div class="mb-3">
-                        <label for="licence" class="form-label">
+                        <label for="code_licence" class="form-label">
                             <h3>Clé de Licence</h3>
                         </label>
-                        <input type="text" class="form-control" id="licence">
+                        <input type="text" class="form-control" name="code_licence">
                     </div>
                     <div class="d-grid gap-2 col-12 mx-auto">
-                        <button type="submit" class="btn btn-success">Enregistrer</button>
+                        <button type="submit" name="valider" class="btn btn-success">Enregistrer</button>
                     </div>
                 </form>
             </div>
@@ -63,5 +66,4 @@
         </div>
     </div>
 </body>
-
 </html>
