@@ -1,8 +1,8 @@
 INSERT INTO client VALUES (1,'Grégoire','26','qhsdjqkj');
 
-INSERT INTO Bassin_eau (id_Bassin,id_client,type,numero,code_postal,rue,ville,volume_max,volume_actuelle) VALUES ('H4040',1,'eau payante','3','59000','2','Lille','100','45');
-INSERT INTO Bassin_eau (id_Bassin,id_client,type,numero,code_postal,rue,ville,volume_max,volume_actuelle) VALUES ('I5050',1,'eau riviere','21','62100','1','Calais','100','10');
-INSERT INTO Bassin_eau (id_Bassin,id_client,type,numero,code_postal,rue,ville,volume_max,volume_actuelle) VALUES ('J6060',1,'eau pluie','53','59100','2','Roubaix','100','100');
+INSERT INTO Bassin_eau (id_Bassin,id_client,type,numero,code_postal,rue,ville,volume_max,volume_actuelle,nom) VALUES ('H4040',1,'eau payante','3','59000','2','Lille','100','45','Saint Amand couvert');
+INSERT INTO Bassin_eau (id_Bassin,id_client,type,numero,code_postal,rue,ville,volume_max,volume_actuelle,nom) VALUES ('I5050',1,'eau riviere','21','62100','1','Calais','100','10','recuperateur de pluie');
+INSERT INTO Bassin_eau (id_Bassin,id_client,type,numero,code_postal,rue,ville,volume_max,volume_actuelle,nom) VALUES ('J6060',1,'eau pluie','53','59100','2','Roubaix','100','100','Saint Amand externe');
 
 INSERT INTO Capteurs (id_capteur,id_bassinEau,adresse_ip) VALUES ('A2020','H4040','124.0.0.1');
 INSERT INTO Capteurs (id_capteur,id_bassinEau,adresse_ip) VALUES ('A2729','H4040','124.0.0.2');
