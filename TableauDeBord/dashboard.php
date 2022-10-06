@@ -47,28 +47,41 @@
 
             <div class="col-3">
                 <p>
-                    <h4>Prix de l'eau <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
+                    <h4>Prix de l'eau Octobre <span class="rectangle">0.035<!-- calcul -->€</span> </h4>
                 </p>
                 <p>
-                    <h4>Volume d'eau utilisée <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
+                    <h4>Volume d'eau utilisée Octobre <span class="rectangle">20 000<!-- calcul -->€</span> </h4>
                 </p>
                 <p>
-                    <h4>Facture d'eau effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
+                    <h4>Facture d'eau effective Octobre <span class="rectangle">557<!-- calcul -->€</span> </h4>
                 </p>
                 <p>
-                    <h4>Econome effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
+                    <h4>Econome effective Octobre <span class="rectangle">150<!-- calcul -->€</span> </h4>
                 </p>
                 <p>
-                    <h4>Facture d'eau effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
+                    <h4>Facture d'eau effective Septembre <span class="rectangle">565<!-- calcul -->€</span> </h4>
                 </p>
                 <p>
-                    <h4>Econome effective <!-- Mois --> <span class="rectangle">0.035<!-- calcul --></span> </h4>
+                    <h4>Econome effective Septembre <span class="rectangle">145<!-- calcul -->€</span> </h4>
                 </p>
             </div>
 
             <div class="col">
                 <?php
-                    $pc = new C_PhpChartX(array(array(11, 9, 5, 12, 14)),'basic_chart');
+                    $data =array(array(1,600),array(2,585),array(3,590),array(4,580),array(5,550),array(6,550),array(7,565),array(8,567),array(9,565),array(10,557),array(11,550),array(12,553));
+                    $pc = new C_PhpChartX(array($data),'basic_chart');
+                    $pc->add_plugins(array('canvasTextRenderer'));
+                    $pc->set_title(array('text'=>'Dépense en Eau par Mois'));
+                    
+                    //$pc->add_series(array('renderer'=>'plugin::BarRenderer'));
+                    $pc->set_yaxes(array(
+                        'yaxis' => array(
+                            'label'=>'Euro')
+                    ));
+                    $pc->set_xaxes(array(
+                        'xaxis'  => array(
+                            'label'=>'Mois'))
+                    );
                     $pc->draw();
                 ?>
             </div>
