@@ -4,7 +4,7 @@ Create Table Client(
 
        id_client                     INT(20)   Primary Key,
        identifiant                   VARCHAR(20),
-       password                      VARCHAR(25),  
+       password                      VARCHAR(200),  
        code_licence		     VARCHAR(100));
 
 Create Table Capteurs( 
