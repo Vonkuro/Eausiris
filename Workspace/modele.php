@@ -50,8 +50,8 @@ function insertBDD(){ //insertion BDD
         $requests = $bdd->prepare('INSERT into client VALUES(?, ?, ?, ?)');
         //$requests -> execute(array($idTableau[0], $_POST['identifiant'], $_POST['motdepasse'], $_POST['code_licence']));
         $requests -> execute(array($idTableau[0], $_POST['identifiant'], $hash, $_POST['code_licence']));
-        $results = $requests->fetchAll();
-        return $results;
+        //$results = $requests->fetchAll();
+        //return $results;
         }
 }
 
