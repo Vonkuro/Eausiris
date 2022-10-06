@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col">
-                <a href="http://localhost/Eausiris/Login/login.html">
+                <a href="http://localhost/Eausiris/Login/login.php">
                     <img src="../logo.png" alt="Eausiris">
                 </a>
             </div>
