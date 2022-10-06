@@ -50,7 +50,7 @@
                     <h4>Prix de l'eau Octobre <span class="rectangle">0.035<!-- calcul -->€</span> </h4>
                 </p>
                 <p>
-                    <h4>Volume d'eau utilisée Octobre <span class="rectangle">20 000<!-- calcul -->€</span> </h4>
+                    <h4>Volume d'eau utilisée Octobre <span class="rectangle">20 000<!-- calcul -->L</span> </h4>
                 </p>
                 <p>
                     <h4>Facture d'eau effective Octobre <span class="rectangle">557<!-- calcul -->€</span> </h4>
