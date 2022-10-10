@@ -5,6 +5,10 @@
   padding: 8% 0 0;
   margin: auto;
 }
+
+.slogan{
+  margin-left: auto;
+}
 .form {
   position: relative;
   z-index: 1;
@@ -89,10 +93,16 @@
   color: #EF3B3A;
 }
 body {
-  background: #76b852; /* fallback for old browsers */
-  background: rgb(141,194,111);
-  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+  /* background: #76b852; /* fallback for old browsers */
+  /* background: rgb(141,194,111);
+  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%); */ 
+  
+  background-image: url(./agroalimentaire.png);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
+}
+
+.CarouselBackground{
+  z-index: -1;
 }
