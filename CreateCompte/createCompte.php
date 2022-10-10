@@ -1,5 +1,5 @@
 <?php
-    require '../Workspace/modele.php';
+    require 'modele.php';
     $insertionbdd = insertBDD();
 ?>
 <!DOCTYPE html>
@@ -13,12 +13,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col">
-                <a href="http://localhost/Eausiris/Login/login.php">
-                    <img src="../logo.png" alt="Eausiris">
-                </a>
+                <img src="../logo.png" alt="Eausiris">
             </div>
             <div class="col">
             </div>
@@ -60,6 +58,13 @@
                     </div>
                     <div class="d-grid gap-2 col-12 mx-auto">
                         <button type="submit" name="valider" class="btn btn-success">Enregistrer</button>
+                        
+                    </div>
+                </form>
+
+                <form name="form_inscription" method="post" action="./login.php">
+                    <div class="d-grid gap-2 col-12 mx-auto">
+                        <button type="submit" name="valider" class="btn btn-success" style="margin-top: 10px" <a href="Projet\Workspace\login\login.php">Connecte-toi ici</a></button>
                     </div>
                 </form>
             </div>
